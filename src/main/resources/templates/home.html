@@ -16,37 +16,49 @@
         }
         .hero-title {
             font-weight: 700;
-            margin-bottom: 1rem;
         }
         .hero-subtitle {
             opacity: 0.9;
             font-weight: 300;
-            margin-bottom: 1.5rem;
         }
         .feature-card {
             transition: transform 0.3s;
-            margin-bottom: 1rem;
+            margin-bottom: 1rem; /* 약간만 여백 축소 */
             height: 100%;
         }
         .feature-card:hover {
             transform: translateY(-5px);
         }
         .icon-lg {
-            font-size: 3.5rem;  /* 아이콘 크기 증가 */
-            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
             color: #2575fc;
         }
         .cta-section {
             background-color: #f8f9fa;
             border-radius: 10px;
-            padding: 2rem;
-            margin-top: 3rem;
+            padding: 1.8rem; /* 패딩 약간 축소 */
+            margin-top: 1rem; /* 상단 여백 약간 줄임 */
             text-align: center;
         }
         .cta-title {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.75rem; /* 폰트 크기 약간만 축소 */
+            margin-bottom: 0.8rem;
             color: #343a40;
+        }
+        /* 카드 내부 패딩 약간 조정 */
+        .card-body.text-center.py-5 {
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+        }
+        /* CTA 섹션 리드 텍스트 */
+        .cta-section .lead {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+        }
+        /* 버튼 아래 여백 조정 */
+        .mb-4 {
+            margin-bottom: 1rem !important;
         }
     </style>
 </head>
