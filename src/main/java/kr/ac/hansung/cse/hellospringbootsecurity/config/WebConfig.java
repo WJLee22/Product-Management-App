@@ -1,0 +1,25 @@
+package kr.ac.hansung.cse.hellospringbootsecurity.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.thymeleaf.extras.springsecurity6.dialect.SpringSecurityDialect;
+
+@Configuration
+public class WebConfig implements WebMvcConfigurer
+{
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry)
+    {
+        // Register a view controller for the root URL
+        registry.addViewController("/").setViewName("home");
+
+    }
+
+    @Bean
+    public SpringSecurityDialect securityDialect() {
+        // SpringSecurityDialect객체는 Thymeleaf 템플릿에서 Spring Security 기능을 사용할 수 있게 해준다.
+        return new SpringSecurityDialect();
+    }
+}
