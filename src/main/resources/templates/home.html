@@ -96,8 +96,21 @@
 
     <!-- 메인 히어로 섹션 -->
     <div class="hero-section text-center shadow">
-        <h1 class="hero-title display-4">WJ 상품 관리 애플리케이션</h1>
-        <p class="hero-subtitle lead">By SpringBoot & Spring Security</p>
+        <!-- 로그인 전 표시할 텍스트 -->
+        <div sec:authorize="isAnonymous()">
+            <h1 class="hero-title display-4">WJ 상품 관리 애플리케이션</h1>
+            <p class="hero-subtitle lead">By SpringBoot & Spring Security</p>
+        </div>
+
+        <!-- 로그인 후 표시할 환영 메시지 -->
+        <div sec:authorize="isAuthenticated()">
+            <h1 class="hero-title display-4">환영합니다!</h1>
+            <p class="hero-subtitle lead">
+                <i class="bi bi-person-check-fill me-2"></i>
+                <span sec:authentication="name">사용자</span>님, 오늘도 좋은 하루 되세요!
+            </p>
+        </div>
+
         <div sec:authorize="isAnonymous()">
             <div class="d-flex justify-content-center gap-3">
                 <a th:href="@{/signup}" class="btn btn-light btn-lg"><i class="bi bi-person-plus me-2"></i>회원가입</a>

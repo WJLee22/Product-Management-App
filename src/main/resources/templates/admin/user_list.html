@@ -18,16 +18,26 @@
             background-color: #0d6efd;
         }
         .sidebar-menu-item {
-            margin-bottom: 5px;
-            border-radius: 5px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 15px;
+            transition: all 0.3s ease;
         }
         .sidebar-menu-item:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateX(5px);
         }
         .sidebar-menu-item.active {
             background-color: rgba(255, 255, 255, 0.2);
             border-left: 4px solid #0d6efd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar-menu-item i {
+            font-size: 1.2rem;
+            width: 30px;
+            text-align: center;
         }
     </style>
 </head>
