@@ -44,6 +44,9 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(authz -> authz
                         .requestMatchers(PUBLIC_MATCHERS).permitAll() // PUBLIC_MATCHERS 에 정의된 URL은 인증 없이 접근 가능
                         .requestMatchers("/", "/home", "/signup").permitAll() // 홈 페이지와 회원가입 페이지는 인증 없이 접근 가능
+                        .requestMatchers("/products").authenticated() // 상품 목록은 인증된 사용자만 볼 수 있음
+                        .requestMatchers("/products/new", "/products/save", "/products/edit/**",
+                                        "/products/update", "/products/delete/**").hasRole("ADMIN") // 상품 관리는 ADMIN 권한 필요
                         .requestMatchers("/admin/**").hasRole("ADMIN") // /admin/** 경로는 ADMIN 역할을 가진 사용자만 접근 가능
                         .anyRequest().authenticated() // 나머지 모든 요청들은 인증이 필요
                 )
