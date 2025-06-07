@@ -63,7 +63,7 @@
     <!-- 메인 히어로 섹션 -->
     <div class="hero-section text-center shadow">
         <h1 class="hero-title display-4">WJ 상품 관리 애플리케이션</h1>
-        <p class="hero-subtitle lead">By SpringBoot</p>
+        <p class="hero-subtitle lead">By SpringBoot & Spring Security</p>
         <div sec:authorize="isAnonymous()">
             <div class="d-flex justify-content-center gap-3">
                 <a th:href="@{/signup}" class="btn btn-light btn-lg"><i class="bi bi-person-plus me-2"></i>회원가입</a>
