@@ -23,7 +23,7 @@
         }
         .feature-card {
             transition: transform 0.3s;
-            margin-bottom: 1rem; /* 약간만 여백 축소 */
+            margin-bottom: 1rem;
             height: 100%;
         }
         .feature-card:hover {
@@ -37,28 +37,50 @@
         .cta-section {
             background-color: #f8f9fa;
             border-radius: 10px;
-            padding: 1.8rem; /* 패딩 약간 축소 */
-            margin-top: 1rem; /* 상단 여백 약간 줄임 */
+            padding: 1.8rem;
+            margin-top: 1rem;
             text-align: center;
         }
         .cta-title {
-            font-size: 1.75rem; /* 폰트 크기 약간만 축소 */
+            font-size: 1.75rem;
             margin-bottom: 0.8rem;
-            color: #343a40;
+            color: #222;
+            font-weight: 600;
         }
-        /* 카드 내부 패딩 약간 조정 */
         .card-body.text-center.py-5 {
             padding-top: 2rem !important;
             padding-bottom: 2rem !important;
         }
-        /* CTA 섹션 리드 텍스트 */
         .cta-section .lead {
             font-size: 1.2rem;
             margin-bottom: 1.2rem;
+            color: #333;
+            font-weight: 500;
         }
-        /* 버튼 아래 여백 조정 */
         .mb-4 {
             margin-bottom: 1rem !important;
+        }
+        /* 텍스트 가독성 개선을 위한 추가 스타일 */
+        .card-text {
+            color: #333;
+            font-weight: 500;
+        }
+        .card-title.h4 {
+            font-weight: 600;
+            color: #222;
+        }
+        /* 알림창 텍스트 개선 */
+        .alert {
+            font-weight: 500;
+        }
+        /* 사용자 정보 카드의 텍스트 가독성 */
+        .card-title {
+            font-weight: 600;
+            color: #222;
+        }
+        .card-text strong {
+            font-weight: 600;
+            color: #333;
         }
     </style>
 </head>
@@ -112,7 +134,7 @@
                 <div class="card-body text-center py-5">
                     <i class="bi bi-person-lock icon-lg"></i>
                     <h3 class="card-title h4 mb-3">관리자 기능</h3>
-                    <p class="card-text">관리자 전용 대시보드로 사용자 관리, 시스템 모니터링 등 다양한 관리자 기능을 한 곳에서 편리하게 사용하세요.</p>
+                    <p class="card-text">관리자 전용 대시보드로 사용자 관리, 상품 관리 등 다양한 관리자 기능을 한 곳에서 편리하게 사용하세요.</p>
                 </div>
             </div>
         </div>
