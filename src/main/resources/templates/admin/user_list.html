@@ -2,9 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
-<head th:insert="~{common :: commonHead}">
+<head>
+    <!-- 공통 헤더 삽입 -->
+    <div th:replace="~{common :: commonHead}"></div>
     <title>사용자 조회 - 상품 관리 시스템</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- 사이드바 및 대시보드 스타일 -->
     <style>
         .dashboard-card {
             border-radius: 10px;
