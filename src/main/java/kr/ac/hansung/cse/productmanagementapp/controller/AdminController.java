@@ -1,7 +1,7 @@
-package kr.ac.hansung.cse.hellospringbootsecurity.controller;
+package kr.ac.hansung.cse.productmanagementapp.controller;
 
-import kr.ac.hansung.cse.hellospringbootsecurity.entity.MyUser;
-import kr.ac.hansung.cse.hellospringbootsecurity.repository.UserRepository;
+import kr.ac.hansung.cse.productmanagementapp.entity.MyUser;
+import kr.ac.hansung.cse.productmanagementapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

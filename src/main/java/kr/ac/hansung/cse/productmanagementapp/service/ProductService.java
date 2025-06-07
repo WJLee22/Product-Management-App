@@ -1,7 +1,7 @@
-package kr.ac.hansung.cse.hellospringbootsecurity.service;
+package kr.ac.hansung.cse.productmanagementapp.service;
 
-import kr.ac.hansung.cse.hellospringbootsecurity.entity.Product;
-import kr.ac.hansung.cse.hellospringbootsecurity.repository.ProductRepository;
+import kr.ac.hansung.cse.productmanagementapp.entity.Product;
+import kr.ac.hansung.cse.productmanagementapp.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

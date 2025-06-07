@@ -1,4 +1,4 @@
-package kr.ac.hansung.cse.hellospringbootsecurity.config;
+package kr.ac.hansung.cse.productmanagementapp.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

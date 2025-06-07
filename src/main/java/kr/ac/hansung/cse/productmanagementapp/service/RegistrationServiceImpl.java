@@ -1,9 +1,9 @@
-package kr.ac.hansung.cse.hellospringbootsecurity.service;
+package kr.ac.hansung.cse.productmanagementapp.service;
 
-import kr.ac.hansung.cse.hellospringbootsecurity.entity.MyRole;
-import kr.ac.hansung.cse.hellospringbootsecurity.entity.MyUser;
-import kr.ac.hansung.cse.hellospringbootsecurity.repository.RoleRepository;
-import kr.ac.hansung.cse.hellospringbootsecurity.repository.UserRepository;
+import kr.ac.hansung.cse.productmanagementapp.entity.MyRole;
+import kr.ac.hansung.cse.productmanagementapp.entity.MyUser;
+import kr.ac.hansung.cse.productmanagementapp.repository.RoleRepository;
+import kr.ac.hansung.cse.productmanagementapp.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

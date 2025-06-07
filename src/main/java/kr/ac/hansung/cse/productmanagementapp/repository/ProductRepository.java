@@ -1,6 +1,6 @@
-package kr.ac.hansung.cse.hellospringbootsecurity.repository;
+package kr.ac.hansung.cse.productmanagementapp.repository;
 
-import kr.ac.hansung.cse.hellospringbootsecurity.entity.Product;
+import kr.ac.hansung.cse.productmanagementapp.entity.Product;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

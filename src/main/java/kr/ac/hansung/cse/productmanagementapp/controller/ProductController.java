@@ -1,8 +1,8 @@
-package kr.ac.hansung.cse.hellospringbootsecurity.controller;
+package kr.ac.hansung.cse.productmanagementapp.controller;
 
 import jakarta.validation.Valid;
-import kr.ac.hansung.cse.hellospringbootsecurity.entity.Product;
-import kr.ac.hansung.cse.hellospringbootsecurity.service.ProductService;
+import kr.ac.hansung.cse.productmanagementapp.entity.Product;
+import kr.ac.hansung.cse.productmanagementapp.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

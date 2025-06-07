@@ -1,13 +1,13 @@
-package kr.ac.hansung.cse.hellospringbootsecurity;
+package kr.ac.hansung.cse.productmanagementapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HelloSpringBootSecurityApplication {
+public class ProductManagementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloSpringBootSecurityApplication.class, args);
+		SpringApplication.run(ProductManagementApplication.class, args);
 	}
 
 }

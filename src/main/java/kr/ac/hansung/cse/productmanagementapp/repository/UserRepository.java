@@ -1,6 +1,6 @@
-package kr.ac.hansung.cse.hellospringbootsecurity.repository;
+package kr.ac.hansung.cse.productmanagementapp.repository;
 
-import kr.ac.hansung.cse.hellospringbootsecurity.entity.MyUser;
+import kr.ac.hansung.cse.productmanagementapp.entity.MyUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

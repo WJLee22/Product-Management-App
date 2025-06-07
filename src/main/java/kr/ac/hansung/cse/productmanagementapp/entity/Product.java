@@ -1,4 +1,4 @@
-package kr.ac.hansung.cse.hellospringbootsecurity.entity;
+package kr.ac.hansung.cse.productmanagementapp.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

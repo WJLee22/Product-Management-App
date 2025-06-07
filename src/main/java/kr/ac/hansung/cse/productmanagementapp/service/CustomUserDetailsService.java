@@ -1,7 +1,7 @@
-package kr.ac.hansung.cse.hellospringbootsecurity.service;
+package kr.ac.hansung.cse.productmanagementapp.service;
 
-import kr.ac.hansung.cse.hellospringbootsecurity.entity.MyUser;
-import kr.ac.hansung.cse.hellospringbootsecurity.repository.UserRepository;
+import kr.ac.hansung.cse.productmanagementapp.entity.MyUser;
+import kr.ac.hansung.cse.productmanagementapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;

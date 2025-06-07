@@ -1,7 +1,7 @@
-package kr.ac.hansung.cse.hellospringbootsecurity.service;
+package kr.ac.hansung.cse.productmanagementapp.service;
 
-import kr.ac.hansung.cse.hellospringbootsecurity.entity.MyRole;
-import kr.ac.hansung.cse.hellospringbootsecurity.entity.MyUser;
+import kr.ac.hansung.cse.productmanagementapp.entity.MyRole;
+import kr.ac.hansung.cse.productmanagementapp.entity.MyUser;
 
 import java.util.List;
 
