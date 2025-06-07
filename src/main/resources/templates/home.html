@@ -26,14 +26,27 @@
         .feature-card {
             transition: transform 0.3s;
             margin-bottom: 1rem;
+            height: 100%;
         }
         .feature-card:hover {
             transform: translateY(-5px);
         }
         .icon-lg {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;  /* 아이콘 크기 증가 */
+            margin-bottom: 1.5rem;
             color: #2575fc;
+        }
+        .cta-section {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #343a40;
         }
     </style>
 </head>
@@ -62,37 +75,43 @@
         </div>
     </div>
 
-    <!-- 로그인 안한 사용자에게 보여줄 기능 소개 -->
+    <!-- 로그인 안한 사용자에게 보여줄 기능 소개 - 카드 크기 증가 -->
     <div sec:authorize="isAnonymous()" class="row mt-4">
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm feature-card">
-                <div class="card-body text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm feature-card">
+                <div class="card-body text-center py-5">
                     <i class="bi bi-cart-check icon-lg"></i>
-                    <h3 class="card-title h5">간편한 상품 관리</h3>
-                    <p class="card-text text-muted">쉽고 빠르게 제품을 추가하고 관리하세요.</p>
+                    <h3 class="card-title h4 mb-3">간편한 상품 관리</h3>
+                    <p class="card-text">쉽고 빠르게 제품을 추가하고 관리하세요. 직관적인 인터페이스로 상품의 생성, 수정, 삭제를 손쉽게 할 수 있습니다.</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm feature-card">
-                <div class="card-body text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm feature-card">
+                <div class="card-body text-center py-5">
                     <i class="bi bi-shield-check icon-lg"></i>
-                    <h3 class="card-title h5">안전한 보안 시스템</h3>
-                    <p class="card-text text-muted">Spring Security로 데이터를 안전하게 보호합니다.</p>
+                    <h3 class="card-title h4 mb-3">안전한 보안 시스템</h3>
+                    <p class="card-text">Spring Security 기반으로 구현된 안전한 인증 및 권한 부여 시스템으로 데이터를 안전하게 보호합니다.</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm feature-card">
-                <div class="card-body text-center">
-                    <i class="bi bi-graph-up icon-lg"></i>
-                    <h3 class="card-title h5">데이터 분석</h3>
-                    <p class="card-text text-muted">제품 정보를 효과적으로 분석하고 관리하세요.</p>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm feature-card">
+                <div class="card-body text-center py-5">
+                    <i class="bi bi-person-lock icon-lg"></i>
+                    <h3 class="card-title h4 mb-3">관리자 기능</h3>
+                    <p class="card-text">관리자 전용 대시보드로 사용자 관리, 시스템 모니터링 등 다양한 관리자 기능을 한 곳에서 편리하게 사용하세요.</p>
                 </div>
             </div>
         </div>
-        <div class="col-12 text-center mt-4">
-            <p class="lead">지금 바로 회원가입하고 서비스를 이용해보세요!</p>
+
+        <!-- 가입 유도 CTA 섹션 - 더 강조 -->
+        <div class="col-12">
+            <div class="cta-section shadow-sm">
+                <h2 class="cta-title"><i class="bi bi-rocket me-2"></i>지금 바로 시작하세요!</h2>
+                <p class="lead mb-4">회원가입 후 WJ 상품 관리 시스템의 모든 기능을 무료로 이용해보세요.</p>
+                <a th:href="@{/signup}" class="btn btn-primary btn-lg px-5"><i class="bi bi-person-plus me-2"></i>무료로 시작하기</a>
+            </div>
         </div>
     </div>
 
@@ -133,20 +152,6 @@
                     <a th:href="@{/admin/dashboard}" class="btn btn-info"><i class="bi bi-speedometer2 me-1"></i>관리자 대시보드</a>
                     <a th:href="@{/admin/users}" class="btn btn-secondary"><i class="bi bi-people me-1"></i>사용자 목록</a>
                     <a th:href="@{/products/new}" class="btn btn-success"><i class="bi bi-plus-circle me-1"></i>상품 등록</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 인증이 되어있지않다면 로그인하라는 의미에서 login URL로 리다이렉트시킴 -->
-    <div sec:authorize="isAnonymous()" class="mt-3">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">환영합니다!</h3>
-                <p class="card-text">로그인하시면 상품 관리 기능을 사용하실 수 있습니다.</p>
-                <div class="d-flex gap-2">
-                    <a th:href="@{/login}" class="btn btn-primary"><i class="bi bi-box-arrow-in-right me-1"></i>로그인</a>
-                    <a th:href="@{/signup}" class="btn btn-secondary"><i class="bi bi-person-plus me-1"></i>회원가입</a>
                 </div>
             </div>
         </div>
