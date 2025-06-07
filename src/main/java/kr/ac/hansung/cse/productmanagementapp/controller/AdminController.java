@@ -10,7 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/admin")
@@ -32,7 +34,14 @@ public class AdminController {
         // 상품 통계
         List<Product> products = productService.listAll();
         model.addAttribute("productCount", products.size());
-        model.addAttribute("products", products.subList(0, Math.min(5, products.size()))); // 최근 5개 상품만 표시
+
+        // 최신 상품 5개 (ID 기준 내림차순)
+        List<Product> recentProducts = products.stream()
+                .sorted(Comparator.comparing(Product::getId).reversed())
+                .limit(5)
+                .collect(Collectors.toList());
+
+        model.addAttribute("products", recentProducts);
 
         return "admin/dashboard";
     }
