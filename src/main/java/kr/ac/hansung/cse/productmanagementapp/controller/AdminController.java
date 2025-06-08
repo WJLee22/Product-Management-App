@@ -39,6 +39,7 @@ public class AdminController {
         List<Product> recentProducts = products.stream()
                 .sorted(Comparator.comparing(Product::getId).reversed())
                 .limit(5)
+                .sorted(Comparator.comparing(Product::getId)) // 5개 중 오름차순 정렬
                 .collect(Collectors.toList());
 
         model.addAttribute("products", recentProducts);
