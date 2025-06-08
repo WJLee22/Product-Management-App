@@ -13,6 +13,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 
+
+/*
+serDetailsService 인터페이스를 구현하여 Spring Security에 사용자 인증 로직을 제공.
+loadUserByUsername 메소드는 이메일을 기반으로 사용자를 조회.
+데이터베이스에서 조회한 MyUser 객체를 Spring Security의 UserDetails 객체로 변환.
+사용자의 역할(Role)을 Spring Security의 GrantedAuthority로 변환하여 권한 체크에 사용합니다.
+*/
+
 // 인증 관리자는 UserDetailsService 를 통해 UserDetails 객체를 획득하고
 // 이 UserDetails 객체에서 인증 및 인가에 필요한 정보를 추출하여 사용한다.
 @Service

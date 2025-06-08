@@ -14,6 +14,12 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+// 회원가입 관련 비즈니스 로직을 처리하는 서비스 클래스.
+//이메일 중복 체크 기능을 제공.
+//역할 이름으로 역할 정보를 조회하는 기능을 제공.
+//사용자 생성 시 비밀번호를 BCrypt로 암호화한 후 저장.
+//사용자에게 역할을 할당하여 권한 관리를 수행.
+
 @Service
 @Transactional
 public class RegistrationServiceImpl implements RegistrationService {

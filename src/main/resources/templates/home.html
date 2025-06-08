@@ -205,7 +205,9 @@
                 </p>
                 <p class="card-text">
                     <strong>권한:</strong>
-                    <span th:each="authority : ${#authentication.authorities}" class="badge bg-secondary me-1" th:text="${authority.authority}"></span>
+                    <span th:each="authority : ${#authentication.authorities}"
+                          th:classappend="${authority.authority == 'ROLE_ADMIN'} ? 'badge bg-danger me-1' : 'badge bg-primary me-1'"
+                          th:text="${authority.authority}"></span>
                 </p>
 
                 <!-- 일반 사용자에게 권한 안내 메시지 -->
